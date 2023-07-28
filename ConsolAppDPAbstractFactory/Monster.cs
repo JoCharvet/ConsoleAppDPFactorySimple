@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ConsoleAppDPFactorySimple
+namespace ConsolAppDPAbstractFactory
 {
     public abstract class Monster
     {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppDPFactorySimple
 {
+    
     public abstract class Monster
     {
         protected string name;
@@ -13,6 +14,7 @@ namespace ConsoleAppDPFactorySimple
         protected int lvl;
         protected int atk;
 
+        
         abstract public int Attack();
         abstract public int LooseHp(int _nb);
         abstract public string Die();
