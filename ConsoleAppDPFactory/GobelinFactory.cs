@@ -9,14 +9,14 @@ namespace ConsoleAppDPFactory
 {
     public class GobelinFactory : MonsterFactory
     {
-        Random r = new Random();
+        
         public override Monster InstantiateMonster(int _playerlvl)
         {
             if (_playerlvl < 4)
             {
                 return new Gobelin(1);
             }
-            int gobelinlvl = r.Next(_playerlvl - 4, _playerlvl +2);
+            int gobelinlvl = this.r.Next(_playerlvl - 4, _playerlvl +2);
             return new Gobelin(gobelinlvl);
         }
     }

@@ -9,7 +9,7 @@ namespace ConsoleAppDPFactory
 {
     public abstract class MonsterFactory
     {
-        Random r = new Random();
+        protected Random r = new Random();
         public abstract Monster InstantiateMonster(int _playerlvl);
     }
 }
