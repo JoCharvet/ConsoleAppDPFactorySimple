@@ -24,7 +24,12 @@ Console.WriteLine(monsterD.ToString());
 Console.WriteLine(monsterE.ToString());
 Console.ReadLine();
 
-
+/// <summary>
+/// simule le fait de générer un monstre aléatoire en fonction du niveau du héros et du type de terrain
+/// déporté ici car la classe héros est simulé ,si elle etait réelle on aurait pu deporter se code dans la factory en envoyant le nombre de rencontre du
+/// héro en parametre
+/// </summary>
+/// <return>un monstre basic ou monstre</return>
 Monster generateRandom(int _herolvl ,string _ground)
 {
 

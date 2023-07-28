@@ -7,6 +7,6 @@ namespace ConsolAppDPAbstractFactory
 {
     public abstract class Orc : Monster
     {
-        public abstract void Rage();
+        public abstract string Rage();
     }
 }

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsolAppDPAbstractFactory
 {
+    // Classe BossGobelin hérite de la classe Gobelin
+    // Les instances de BossGobelin sont des boss qui ont des caractéristiques et methode spéciales comme une attaque spéciale
     public class BossGobelin : Gobelin
     {
+        // Constructeur par défaut
         public BossGobelin()
         {
             this.name = "un nom de gobelin";
@@ -17,6 +20,8 @@ namespace ConsolAppDPAbstractFactory
             this.hp = this.lvl * 5;
         }
 
+        // Constructeur qui prend un niveau en input
+        // Le nom du Boss gobelin dépend de son niveau et ses stats calculées en fonction de ce dernier
         public BossGobelin(int _lvl)
         {
             this.name = "un nom de Roi gobelin";
@@ -25,6 +30,7 @@ namespace ConsolAppDPAbstractFactory
             this.hp = _lvl * 10;
         }
 
+        // Constructeur qui prend un nom, un niveau, une attaque et des points de vie en input
         public BossGobelin(string name, int lvl, int atk, int hp)
         {
             this.name = name;
@@ -32,23 +38,26 @@ namespace ConsolAppDPAbstractFactory
             this.atk = atk;
             this.hp = hp;
         }
-        public override void Flee()
-        {
-            Console.WriteLine("A Moi !");
-            Console.WriteLine("3 gobelins apparaissent !");
 
+        // La méthode de fuite
+        public override string Flee()
+        {
+           return "A Moi ! \r\n 3 gobelins apparaissent !";
         }
 
+        // La méthode d'attaque
         public override int Attack()
         {
             return (int)Math.Floor(this.atk * 1.5);
         }
 
+        // La méthode de mort du boss gobelin
         public override string Die()
         {
             return "Eurrrhhhrrh... comme un boss Gobelin !";
         }
 
+        // La méthode pour réduire les points de vie (HP) du boss gobelin (si les points de vie sont réduits à zéro, la méthode return 0)
         public override int LooseHp(int n)
         {
             if (this.hp - n <= 0)
@@ -60,11 +69,10 @@ namespace ConsolAppDPAbstractFactory
             return 0;
         }
 
+        // Une méthode pour une attaque spéciale du boss gobelin
         public int SpecialAttackGobelin()
         {
-              return (int)Math.Floor(this.atk * 2.5)+50;
+            return (int)Math.Floor(this.atk * 2.5) + 50;
         }
-
-       
     }
 }
